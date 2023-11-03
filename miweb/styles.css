@@ -1,6 +1,7 @@
 /*BODY*/
 body{
     background-color: #222;
+    z-index: 100;
 }
 *{
     margin: 0vw;
@@ -27,6 +28,7 @@ header{
     background-color: #222;
     color: white;
     font-size: 15px;
+    z-index: 200;
     
 }
 button{
@@ -34,19 +36,19 @@ button{
 
 }
 
+a{
+    text-decoration: none;
+}
 
-.acces:visited{
+a:active{
     color: white;
 }
-
-.acces:hover{
+a:visited{
+    color: white;
+}
+a:hover{
     color: #FF6900;
-    text-decoration: none;
 }
-.acces{
-    text-decoration: none;
-}
-
 .logo{
     display: flex;
     align-items: center;
@@ -71,10 +73,9 @@ header nav ol{
 header nav li{
     margin-right: 20px;
 }
-header nav li a{
+header a{
     margin-top: 5px;
 }
-
 
 /*PRESENTATION*/
 #prentation_box{
