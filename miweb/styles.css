@@ -1,12 +1,14 @@
-/*BODY*/
+
+/*GENERAL MODIFICATIONS*/
+
 body{
     background-color: #222;
+    z-index: 100;
 }
 *{
     margin: 0vw;
     padding: 0vw;
     font-family: 'Poppins', sans-serif;
-    
 }
 ol{
     list-style: none;
@@ -14,6 +16,51 @@ ol{
 ul{
     list-style: none;
 }
+#struct{
+    display: grid;
+    grid-auto-rows: min-content;
+}
+#general-section{
+    grid-row: 1;
+}
+#specifications-section{
+    grid-row: 2;
+}
+#specifications-section-caracterist{
+    grid-row: 3;
+}
+#specifications-section-media{
+    grid-row: 4;
+}
+#opinions-section{
+    grid-row: 5;
+}
+button{
+    border-radius: 10px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+a:active{
+    color: white;
+}
+a:visited{
+    color: white;
+}
+a:hover{
+    color: #FF6900;
+}
+.button-style{
+    background-color:#FF6900 ;
+    color:white;
+    padding: 5px;
+}
+.button-style:active{
+    background-color: #222;
+    color: #FF6900;
+}
+
 /*NAVEGATION*/
 
 header{
@@ -27,26 +74,9 @@ header{
     background-color: #222;
     color: white;
     font-size: 15px;
+    z-index: 200;
     
 }
-button{
-    border-radius: 10px;
-
-}
-
-
-.acces:visited{
-    color: white;
-}
-
-.acces:hover{
-    color: #FF6900;
-    text-decoration: none;
-}
-.acces{
-    text-decoration: none;
-}
-
 .logo{
     display: flex;
     align-items: center;
@@ -57,11 +87,6 @@ button{
     font-size: 15px;
     padding-left: 10px;
 }
-#comprar{
-    background-color:#FF6900 ;
-    color:white;
-    padding: 5px;
-}
 header nav ol{
     float: right;
     display: flex;
@@ -71,10 +96,9 @@ header nav ol{
 header nav li{
     margin-right: 20px;
 }
-header nav li a{
+header a{
     margin-top: 5px;
 }
-
 
 /*PRESENTATION*/
 #prentation_box{
@@ -129,28 +153,26 @@ header nav li a{
 
 
 /*ESPECIFICATIONS*/
-
-#media{
+#box-content-media{
     display: grid;
-    align-content: center;
-    margin-top: -30vw;
+    grid-auto-rows: min-content;
 }
+#specifications-media ul li img{
+    grid-row: 1;
+}
+#specifications-media ul li video{
+    grid-row: 2;
+}
+
 .media-content{
-    height: 100vw;
-    width: 100vw;
+    width: 100vw;    
 }
 .image-cinema{
     width: 100vw;
-    align-content: center;
 }
 #specifications-media-2{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    
-    
-    
+    display: grid;
+    align-items: center;
 }
 
 .box-content{
@@ -170,7 +192,9 @@ header nav li a{
 margin-left: 5vw;
 }
 #characteris{
-    margin-top: -20vw;
+    display: grid;
+    grid-template-rows: auto;
+    margin-top: 10vh;
     color: white;
 }
 .specifications{
@@ -186,4 +210,56 @@ margin-left: 5vw;
 }
 .elements{
     display: flex;
+}
+/*Opinions*/
+#opinions{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+#opinion-box{
+    grid-row: 2;
+}
+.form-opinions{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr) 1,1fr;
+    justify-items: center;
+}
+
+input{
+    grid-row: 2;
+    grid-column: 2;
+    width: 50vw;
+    font-size:medium;
+}
+#button-send{
+    grid-row: 3;
+    grid-column: 2;
+    width: 20vw;
+    margin-top: 1vw;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: black;
+}
+#final-page{
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+}
+.final-links{
+    margin-top: 2vw;
+    grid-row: 1;
+    color: white;
+}
+.content-final{
+    margin-top: 2vw;
 }
