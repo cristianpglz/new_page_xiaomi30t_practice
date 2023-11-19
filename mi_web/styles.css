@@ -155,31 +155,44 @@ header a{
 /*ESPECIFICATIONS*/
 #box-content-media{
     display: grid;
-    grid-auto-rows: min-content;
+    grid-auto-rows: auto;
 }
 #specifications-media ul li img{
     grid-row: 1;
+
 }
 #specifications-media ul li video{
     grid-row: 2;
 }
 
-.media-content{
-    width: 100vw;    
-}
 .image-cinema{
     width: 100vw;
 }
 #specifications-media-2{
     display: grid;
     align-items: center;
+    justify-items: center;
 }
-
 .box-content{
-    margin-top: -60vw;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+}
+.media-content{
+    grid-row: 1;
+    width: 100vw;
+}
+#view-move-content{    
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 60%;
+}
+#view-text-animation{
+    animation: text-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 25%;
 }
 .title-information{
     color: white;
@@ -193,23 +206,28 @@ margin-left: 5vw;
 }
 #characteris{
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: max-content;
     margin-top: 10vh;
     color: white;
 }
 .specifications{
-    margin-top: 5vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-rows: repeat(1, 1fr);
     justify-items: center;
     align-items: center;
-    white-space: break-spaces!important;
     color: white;
     border-top: 1px solid #FF6900;
-
 }
 .elements{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin: 2vw;
+    align-items: center;
+}
+#positions-content{
+    display: grid;
 }
 /*Opinions*/
 #opinions{
@@ -262,4 +280,26 @@ footer{
 }
 .content-final{
     margin-top: 2vw;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        translate: 50px;
+    }
+    to {
+        opacity: 1;
+        translate: 0;
+    }
+
+}
+@keyframes text-reveal {
+    from {
+        opacity: 0;
+        translate: 200px;
+    }
+    to {
+        opacity: 1;
+        translate: 0;
+    }
 }
