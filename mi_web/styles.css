@@ -1,73 +1,13 @@
 
-/*GENERAL MODIFICATIONS*/
-
-body{
-    background-color: #222;
-    z-index: 100;
-}
-*{
-    margin: 0vw;
-    padding: 0vw;
-    font-family: 'Poppins', sans-serif;
-}
-ol{
-    list-style: none;
-}
-ul{
-    list-style: none;
-}
-#struct{
-    display: grid;
-    grid-auto-rows: min-content;
-}
-#general-section{
-    grid-row: 1;
-}
-#specifications-section{
-    grid-row: 2;
-}
-#specifications-section-caracterist{
-    grid-row: 3;
-}
-#specifications-section-media{
-    grid-row: 4;
-}
-#opinions-section{
-    grid-row: 5;
-}
-button{
-    border-radius: 10px;
-    cursor: pointer;
-}
-a{
-    text-decoration: none;
-}
-a:active{
-    color: white;
-}
-a:visited{
-    color: white;
-}
-a:hover{
-    color: #FF6900;
-}
-.button-style{
-    background-color:#FF6900 ;
-    color:white;
-    padding: 5px;
-}
-.button-style:active{
-    background-color: #222;
-    color: #FF6900;
-}
 
 /*NAVEGATION*/
 
 header{
     position: fixed;
-    padding: 5px;
-    width: 100%;
-    min-height: 50px;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    width: 100vw;
+    min-height: px;
     display: flex;
     justify-content: space-between;
     flex-direction: column-reverse;
@@ -75,7 +15,6 @@ header{
     color: white;
     font-size: 15px;
     z-index: 200;
-    
 }
 .logo{
     display: flex;
@@ -85,7 +24,7 @@ header{
 #logo-modelo{
     display: flex;
     font-size: 15px;
-    padding-left: 10px;
+    margin-left: 10px;
 }
 header nav ol{
     float: right;
@@ -99,7 +38,15 @@ header nav li{
 header a{
     margin-top: 5px;
 }
-
+.acces:active{
+    color: white;
+}
+.acces:visited{
+    color: white;
+}
+.acces:hover{
+    color: #FF6900;
+}
 /*PRESENTATION*/
 #prentation_box{
     background-image: url("./images/image_presentation.jpg");
@@ -135,7 +82,6 @@ header a{
 
 .img_xiaomi_30t{
     width: 20vw;
-
 }
 
 .images_in_front_of_presentation_right{
@@ -147,11 +93,6 @@ header a{
     margin-left: 25vw;
 }
 
-.general:hover {
-    color: white;
-}
-
-
 /*ESPECIFICATIONS*/
 #box-content-media{
     display: grid;
@@ -159,7 +100,6 @@ header a{
 }
 #specifications-media ul li img{
     grid-row: 1;
-
 }
 #specifications-media ul li video{
     grid-row: 2;
@@ -184,23 +124,12 @@ header a{
     grid-row: 1;
     width: 100vw;
 }
-#view-move-content{    
-    animation: reveal linear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 60%;
-}
-#view-text-animation{
-    animation: text-reveal linear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 25%;
-}
 .title-information{
     color: white;
     font-stretch:expanded;
     font-weight: bold;
     font-size:x-large;
 }
-
 #characteris h2{
 margin-left: 5vw;
 }
@@ -264,39 +193,110 @@ input{
 
 footer{
     background-color: black;
+    padding-bottom: 6vw;
 }
 #final-page{
-    margin: 0px;
-    padding: 0px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
     justify-items: center;
 }
 .final-links{
-    margin-top: 2vw;
+    margin-top: 3vw;
     grid-row: 1;
     color: white;
 }
 .content-final{
     margin-top: 2vw;
+    color: #898989;
+    display: grid;
+}
+footer a:active{
+    color: #898989;
+}
+footer a:visited{
+    color: #898989;
+}
+footer a:hover{
+    color: #FF6900;
 }
 
+/*GENERAL MODIFICATIONS*/
+
+body{
+    background-color: #222;
+    z-index: 100;
+    overflow-x: hidden;
+}
+*{
+    margin: 0vw;
+    padding: 0vw;
+    font-family: 'Poppins', sans-serif;
+}
+ol{
+    list-style: none;
+}
+ul{
+    list-style: none;
+}
+#struct{
+    display: grid;
+    grid-auto-rows: min-content;
+}
+#general-section{
+    grid-row: 1;
+}
+#specifications-section{
+    grid-row: 2;
+}
+#specifications-section-caracterist{
+    grid-row: 3;
+}
+#specifications-section-media{
+    grid-row: 4;
+}
+#opinions-section{
+    grid-row: 5;
+}
+button{
+    border-radius: 10px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+
+.button-style{
+    background-color:#FF6900 ;
+    color:white;
+    padding: 5px;
+}
+.button-style:active{
+    background-color: #222;
+    color: #FF6900;
+}
+#view-move-content{    
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 40%;
+}
+#view-text-animation{
+    animation: text-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 70% cover 40%;
+}
 @keyframes reveal {
     from {
         opacity: 0;
-        translate: 50px;
     }
     to {
         opacity: 1;
-        translate: 0;
     }
 
 }
 @keyframes text-reveal {
     from {
         opacity: 0;
-        translate: 200px;
+        translate: 0 400px;
     }
     to {
         opacity: 1;
