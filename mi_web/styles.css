@@ -169,11 +169,15 @@ margin-left: 5vw;
 #opinion-box{
     grid-row: 2;
 }
+#opinions-section span{
+    grid-row: 3;
+}
 .form-opinions{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr) 1,1fr;
     justify-items: center;
+    margin-left: 2vw;
 }
 
 input{
@@ -188,6 +192,14 @@ input{
     width: 20vw;
     margin-top: 1vw;
 }
+.view-opinions{
+    grid-row: 3;
+    font-size: medium;
+    margin-left: 8vw;
+    justify-items: start;
+    display: grid;
+    align-content: space-around;
+}
 
 /* FOOTER */
 
@@ -199,6 +211,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    align-items: start;
 }
 .final-links{
     margin-top: 3vw;
@@ -218,6 +231,10 @@ footer a:visited{
 }
 footer a:hover{
     color: #FF6900;
+}
+.order-in-footer{
+    display: grid;
+    margin-left: 3vw;
 }
 
 /*GENERAL MODIFICATIONS*/
@@ -282,7 +299,7 @@ a{
 #view-text-animation{
     animation: text-reveal linear both;
     animation-timeline: view();
-    animation-range: entry 70% cover 40%;
+    animation-range: entry 70% cover 50%;
 }
 @keyframes reveal {
     from {
@@ -296,7 +313,7 @@ a{
 @keyframes text-reveal {
     from {
         opacity: 0;
-        translate: 0 400px;
+        translate: 0 200px;
     }
     to {
         opacity: 1;
